@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_colour"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Classification Type"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/fruitVCNN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <Button
+        android:id="@+id/leafmob"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        android:text="Leaf - VCNN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toEndOf="@+id/leafeff"
+        app:layout_constraintTop_toBottomOf="@+id/fruitmob"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/fruitVCNN"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        android:text="Fruit - VCNN"
+        app:layout_constraintBottom_toTopOf="@+id/leafvres"
+        app:layout_constraintEnd_toStartOf="@+id/fruitEff"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/fruitmob"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        android:text="Fruit - MobileNet"
+        app:layout_constraintBottom_toTopOf="@+id/leafmob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fruitEff"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/fruitEff"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        android:text="Fruit - EfficientNet"
+        app:layout_constraintBottom_toTopOf="@+id/leafeff"
+        app:layout_constraintEnd_toStartOf="@+id/fruitmob"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fruitVCNN"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/leafeff"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        android:text="Leaf - EfficientNet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/leafmob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fruitEff"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/leafvres"
+        android:layout_width="107dp"
+        android:layout_height="113dp"
+        android:text="Leaf - vres-cnn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leafeff"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fruitVCNN"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
